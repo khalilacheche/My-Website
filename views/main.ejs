@@ -1,0 +1,41 @@
+<% include partials/header %>
+            <!-- Testimonial section -->
+            <section id="social" class="parallax">
+                <div class="overlay">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="sec-title text-center white wow animated fadeInDown">
+                                <h2>Blog</h2>
+                                  <a href="/newpost"  class="btn btn-blue btn-effect" style="margin-left: 83%;">New Post</a>
+                            </div>
+                            <div id="testimonial" class=" wow animated fadeInUp">
+                              <% for(var i=0; i<posts.length; i++) {%>
+                                <div class="testimonial-item text-center">
+                                  <table>
+                                   <tr>
+                                       <td>
+                                         <form action= <%= '/delete/'+posts[i].id %> method="POST" style="float:left;">
+                                           <button type ="submit"> Delete </button>
+                                         </form>
+                                         <form action= <%= '/edit/'+posts[i].id %> method="POST" style="float:left;">
+                                           <button type ="submit"> Edit </button>
+                                         </form>
+                                       </td>
+                                   </tr>
+                                </table>
+                                    <img src="img/member-1.jpg" alt="Our Clients">
+                                    <div class="clearfix">
+                                        <span><%= posts[i].date.toDateString()+', '%></span>
+                                        <span><%= posts[i].title %></span>
+                                        <p><%= posts[i].content %></p>
+                                    </div>
+                                </div>
+                            <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end Testimonial section -->
+<% include partials/footer %>

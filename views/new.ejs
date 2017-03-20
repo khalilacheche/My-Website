@@ -1,0 +1,32 @@
+<% include partials/header %>
+            <!-- Testimonial section -->
+            <section id="social" class="parallax">
+                <div class="overlay">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="sec-title text-center white wow animated fadeInDown">
+                                <h2>Blog</h2>
+                            </div>
+                            <div id="testimonial" class=" wow animated fadeInUp">
+                                <div class="testimonial-item text-center">
+                                    <img src="img/member-1.jpg" alt="Our Clients">
+                                    <div class="clearfix">
+                                      <form action="/insert" method="POST" >
+                                        <div class="input-field">
+                              						<input type="text" name="title" class="form-control" placeholder="Title...">
+                              					</div>
+                              					<div class="input-field">
+                              						<textarea name="content" class="form-control" placeholder="Content..."></textarea>
+                              					</div>
+                              							<button type="submit" id="submit" class="btn btn-blue btn-effect">Create</button>
+                              				</form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end Testimonial section -->
+<% include partials/footer %>
